@@ -1,0 +1,15 @@
+{
+  "input": {
+    "topic": "string",
+    "question": "string",
+    "context": "string (optional)",
+    "audience": "string (optional)"
+  },
+  "output": {
+    "question": "string",
+    "answer": "string",
+    "stronger_version": "string",
+    "key_points": ["string"],
+    "follow_up_questions": ["string"]
+  }
+}

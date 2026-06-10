@@ -1,0 +1,6 @@
+{
+  "strategy": "round_robin",
+  "routers": [
+    "https://maas-llm-aiplatform-hcm.api.vngcloud.vn/v1"
+  ]
+}

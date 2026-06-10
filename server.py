@@ -400,6 +400,10 @@ INDEX_HTML = """
 def home():
     return render_template_string(INDEX_HTML)
 
+@app.route('/health')
+def health():
+    return "OK", 200
+
 @app.route('/api/ask', methods=['POST'])
 def api_ask():
     data = request.json or {}
@@ -437,6 +441,6 @@ def api_ask():
     return jsonify({"error": f"All routers failed: {last_error}"}), 500
 
 if __name__ == '__main__':
-    port = int(os.getenv("PORT", 5000))
+    port = int(os.getenv("PORT", 8080))
     # Run on all network interfaces to allow external access if desired
     app.run(host='0.0.0.0', port=port, debug=True)
